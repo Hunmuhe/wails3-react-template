@@ -14,7 +14,7 @@ const LoginPage: React.FC = () => {
 
     const Login = () => {
         if (username === "" || password === "") {
-            setError("Please enter username and password");
+            setError("Please enter username and password 正确账号username,密码password");
             return;
         }
         GreetService.Login(username, password).then((resultValue: any) => {
