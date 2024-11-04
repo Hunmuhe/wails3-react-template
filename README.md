@@ -12,4 +12,5 @@
 
 
 ## 样式
-[示例图片](./images/login.png)
+![](./images/login.png)
+![](./images/main.png)
