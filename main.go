@@ -58,14 +58,13 @@ func main() {
 	// 'BackgroundColour' is the background colour of the window.
 	// 'URL' is the URL that will be loaded into the webview.
 	login_window := app.NewWebviewWindowWithOptions(application.WebviewWindowOptions{
-		Title:            "Login",
-		MinWidth:         300,
-		MinHeight:        500,
-		MaxWidth:         300,
-		MaxHeight:        500,
-		DisableResize:    true,
-		BackgroundColour: application.NewRGB(255, 255, 255),
-		URL:              "/?login=false",
+		Title:               "Login",
+		Width:               300,
+		Height:              500,
+		DisableResize:       true,
+		MaximiseButtonState: application.ButtonDisabled,
+		BackgroundColour:    application.NewRGB(255, 255, 255),
+		URL:                 "/?login=false",
 	})
 
 	App = &appx{

@@ -6,7 +6,6 @@ import {
 import routes from '~react-pages'
 
 const App: React.FC = () => {
-
   return (
     <>
       <Suspense fallback={

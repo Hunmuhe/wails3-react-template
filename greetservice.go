@@ -13,9 +13,10 @@ func (g *GreetService) Greet(name string) string {
 	return "Hello " + name + "!"
 }
 
-func (g *GreetService) Login(username string, password string) string {
-	login_res := internal.Login("username", "password")
-	if login_res {
+func (g *GreetService) Login(username string, password string) error {
+	err := internal.Login(username, password)
+	fmt.Println("err", err)
+	if err == nil {
 		main_window := App.app.NewWebviewWindowWithOptions(application.WebviewWindowOptions{
 			Title:            "Main",
 			Width:            1300,
@@ -27,10 +28,10 @@ func (g *GreetService) Login(username string, password string) string {
 		for _, window := range App.windows {
 			if window.title == "Login" {
 				window.windowp.Close()
+				break
 			}
 		}
 	}
-
-	fmt.Println(login_res)
-	return "Hello "
+	fmt.Println("err", err)
+	return err
 }
