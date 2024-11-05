@@ -1,12 +1,12 @@
 import React from 'react';
-const Layout: React.FC = () => {
+const Global: React.FC = () => {
     return (
         <>
             <div>
-                Home
+                Global
             </div>
         </>
     );
 };
 
-export default Layout;
+export default Global;
